@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [main]
 
-jobs:
+jobs:   
   CodeQL-Build:
     runs-on: ubuntu-latest
 
@@ -21,7 +21,7 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v1
         with:
-          languages: python
+          languages: python, csharp
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
